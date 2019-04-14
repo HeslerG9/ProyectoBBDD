@@ -35,7 +35,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#hero"><img src="img/unah10.png" width="25" height="38" alt="" title="" /></img>  UNAH</a></h1>
+        <h1><a href="#hero"><img src="img/air/logoarolinea.jpg" width="15" height="25" alt="" title="" /></img>  Copán Airlines</a></h1>
         <!-- Uncomment below if you prefer to use a text logo -->
         <!--<h1><a href="#hero">Regna</a></h1>-->
       </div>

@@ -9,6 +9,12 @@ body{
 
 #imagen-logo{
     width: 200px;
+    position: relative;
+    top: 25px;
+    left: 25px;
+   
+    border-radius: 3%
+
 }
 
 #div-login{
