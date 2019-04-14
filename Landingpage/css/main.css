@@ -224,7 +224,7 @@ body, html{
 .dashboard-sideBar-UserInfo figure img{
 	width: 100px;
 	height: 100px;
-	border-radius: 100%;
+	border-radius: 4%;
 	display: block;
 	margin: 0 auto;
 }
@@ -774,4 +774,5 @@ input.material-control:focus ~ .bar:before, input.material-control:focus ~ .bar:
 .div #foto{
 	margin-left:auto;
 	margin-right: auto; 
+	width: 50%
 }

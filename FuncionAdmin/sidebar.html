@@ -1,0 +1,299 @@
+<!-- SideBar -->
+
+		<section class="full-box cover dashboard-sideBar">
+		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
+		<div class="full-box dashboard-sideBar-ct">
+			<!--SideBar Title -->
+			<br>
+			<ul class="full-box list-unstyled text-center">
+					
+					<li>
+						<a href="#!" class="btn-exit-system">
+							<i class="zmdi zmdi-power"></i> Cerrar sesión
+						</a>
+					</li>
+				</ul>
+		
+			
+			<!-- SideBar User info -->
+			<div class="full-box dashboard-sideBar-UserInfo">
+				<figure class="full-box">
+						<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
+							Registros Administrador<i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+							</div>
+					<img src="../landingpage/img/air/logoaerolinea.jpg" style="width:70%" alt="UserIcon">
+					<figcaption class="text-center text-titles"></figcaption>
+				</figure>
+				
+			</div>
+			<!-- SideBar Menu -->
+			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
+				<li>
+					<a href="home.php">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
+					</a>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Listas de Administración <i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="listaCarreras.php"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Carreras</a>
+						</li>
+						<li>
+							<a href="listaEstudiantes.php"><i class="zmdi zmdi-font zmdi-hc-fw"></i>Estudiantes</a>
+						</li>
+						<li>
+							<a href="listaDocentes.php"><i class="zmdi zmdi-font zmdi-hc-fw"></i>Docentes</a>
+						</li>
+						<li>
+							<a href="listaClases.php"><i class="zmdi zmdi-assignment zmdi-hc-fw"></i> Asignaturas</a>
+						</li>
+						<li>
+							<a href="listaAdmins.php"><i class="zmdi zmdi-assignment zmdi-hc-fw"></i> Administradores</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Registro de Aerolinea<i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="#modalCarrera" data-toggle="modal" data-target="#modalCarrera"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Carreras</a>
+						</li>
+						<li>
+							<a href="#modalClases" data-toggle="modal" data-target="#modalClases"><i class="zmdi zmdi-assignment zmdi-hc-fw"></i> Asignatura</a>
+						</li>
+						<li>
+							<a href="#modalAula" data-toggle="modal" data-target="#modalAula"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Aula</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#!" class="btn-sideBar-SubMenu">
+						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Registro de Personal<i class="zmdi zmdi-caret-down pull-right"></i>
+					</a>
+					<ul class="list-unstyled full-box">
+						<li>
+							<a href="registroEmpleado.php"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empleado</a>
+						</li>
+						<li>
+							<a href="registroPiloto.php"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Piloto</a>
+						</li>
+					</ul>
+				</li>
+				
+				
+			</ul>
+		</div>
+	</section>
+<!-- Modal Carrera -->
+	<div class="modal fade" id="modalCarrera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">qu
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <h4 class="modal-title" id="myModalLabel"><br>Registro de una nueva carrera</br></h4>
+			</div>
+			<div class="modal-body">
+			<input type="text" class="material-control" placeholder="ID de carrera" id="codigoCarrera" required="required" maxlength="3" data-toggle="tooltip" data-placement="top" title="Id carrera">
+			<input type="text" class="material-control" placeholder="ID de CentroEstudio" id="codigoCE" required="required" maxlength="6" data-toggle="tooltip" data-placement="top" title="Id carrera">
+			<input type="text" class="material-control" placeholder="Nombre de la carrera" id="nombreCarrera" required="required"  maxlength="50" data-toggle="tooltip" data-placement="top" title="Carrera">
+			<input type="text" class="material-control" placeholder="Nombre Facultad" id="codigoFacultad" required="required" maxlength="10" data-toggle="tooltip" data-placement="top" title="codigo alterno">
+			<input type="text" class="material-control" placeholder="Código Departamento" id="codigoDepartamento" required="required" maxlength="10" data-toggle="tooltip" data-placement="top" title="codigo alterno">									
+			<input type="text" class="material-control" placeholder="Cantidad de asignaturas" id="cantidadAsignaturas" required="required"  maxlength="3" data-toggle="tooltip" data-placement="top" title="Cantidad de asignaturas">
+			<input type="text" class="material-control" placeholder="Cantidad de UV" id="cantidadUv" required="required"  maxlength="3" data-toggle="tooltip" data-placement="top" title="UV">
+			<input type="text" class="material-control" placeholder="Grado" required="required" id="grado" maxlength="50" data-toggle="tooltip" data-placement="top" title="grado">
+									
+
+			  <div id="resultadoCarreras"></div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			  <button type="button" class="btn btn-default" id="btn-registrarCarrera" >Registrarme</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+<!-- Modal Carrera -->
+
+
+<!-- Modal Clases -->	  
+	<div class="modal fade" id="modalClases" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <h4 class="modal-title" id="myModalLabel">Registro de una nueva asignatura</h4>
+			</div>
+			<div class="modal-body">
+					<input type="text" class="material-control tooltips-general"  id="seccion" placeholder="ID de sección" required="required" maxlength="10" data-toggle="tooltip" data-placement="top" title="codigo de sección">
+          <input type="text" class="material-control tooltips-general"  id="HoraInicio"  placeholder="Hora inicio" required="required" minlength="4" maxlength="4" data-toggle="tooltip" data-placement="top" title="Hora inicio">
+          <input type="text" class="material-control tooltips-general"  id="HoraFinal" placeholder="Hora final" required="required" minlength="4" maxlength="4" data-toggle="tooltip" data-placement="top" title="Hora final">
+          <input type="text" class="material-control tooltips-general"  id="Dias" placeholder="Días" required="required" maxlength="50" data-toggle="tooltip" data-placement="top" title="Días">
+          <input type="text" class="material-control tooltips-general"  id="Cupos" placeholder="Cantidad de cupos" required="required" minlength="1" maxlength="4" data-toggle="tooltip" data-placement="top" title="Cantidad cupos">
+          <input type="text" class="material-control tooltips-general"  id="Aula" placeholder="Aula" required="required"  maxlength="15" data-toggle="tooltip" data-placement="top" title="Aula">
+          <input type="text" class="material-control tooltips-general"  id="Asignatura" placeholder="Asignatura" required="required"  maxlength="15" data-toggle="tooltip" data-placement="top" title="Asignatura">
+          <input type="text" class="material-control tooltips-general"  id="Maestro" placeholder="Maestro" required="required"  maxlength="15" data-toggle="tooltip" data-placement="top" title="Maestro">
+			  <div id="resultadoClases"></div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			  <button type="button" class="btn btn-default" id="btn-registrarAsignatura" >Registrarme</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <!-- Modal Clases -->	  
+
+
+<!-- Modal Aula -->
+<div class="modal fade" id="modalAula" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  <h4 class="modal-title" id="myModalLabel"><br>Registro de una nueva aula</br></h4>
+			</div>
+			<div class="modal-body">
+			<input type="text" class="material-control" placeholder="Edificio" id="edificio" required="required" maxlength="3" data-toggle="tooltip" data-placement="top" title="Id carrera">
+			<input type="text" class="material-control" placeholder="Numero de Aula" id="NumeroAula" required="required" maxlength="6" data-toggle="tooltip" data-placement="top" title="Id carrera">
+			
+
+			  <div id="resultadoCarreras"></div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			  <button type="button" class="btn btn-default" id="btn-registrarAula" >Registrar</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+<!-- Modal Aula -->	  
+
+
+<!-- Modal Admin -->
+<div class="modal fade" id="modal-registro-admin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Registro de usuarios</h4>
+			</div>
+			<div class="modal-body">
+				
+				<input type="text" class="material-control" placeholder="Numero de Empleado" id="NumeroEmpleado" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Nombres" id="Nombres" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Apellidos" id="Apellidos" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Numero de Identidad" id="NumeroID" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Correo" id="correo" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="date" class="material-control" placeholder="Fecha de Nacimiento" id="FechaNacimiento" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Contraseña" id="Contrasena" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+<!-- 				<input type="select" class="material-control" placeholder="Tipo de Usuario" id="TipoUsuario" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+ -->				<select class="material-control" id="TipoUsuario">
+					<option>Selecciona el tipo de Usuario</option>
+					<option>Admin</option>
+					<option>Estudiante</option>
+					<option>Docente</option>
+					<option>Empleado</option>
+				
+				</select>
+				<div id="resultado"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-default" id="btn-registrarAdmin" data-loading-text="Guardando..." >Registrarme</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal Admin-->
+
+<!-- Modal Estudiante -->
+<div class="modal fade" id="modal-registro-estudiante" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Registro de usuarios</h4>
+			</div>
+			<div class="modal-body">
+				<input type="text" class="material-control" placeholder="Nombres" id="NombreAlumno" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Apellidos" id="ApellidoAlumno" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<select class="material-control" id="Carrera">
+						<option>Selecciona la carrera</option>
+						<option>Ingenieria En Sistemas</option>
+						<option>Ingenieria Electrica</option>
+						<option>Matematicas</option>
+					</select>
+				<input type="email" class="material-control" placeholder="Correo" id="CorreoAlumno" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="tel" class="material-control" placeholder="Telefono" id="TelAlumno" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="password" class="material-control" placeholder="Contraseña" id="ContraAlumno" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Numero de cuenta" id="NumCta" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="date" class="material-control" placeholder="Fecha de ingreso" id="FechaIngreso" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Fecha de Ingreso">
+				<input type="date" class="material-control" placeholder="Fecha de Nacimiento" id="FechaNac" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Fecha Nacimiento">
+				<select class="material-control" id="CentroEstudio">
+					<option>Selecciona el centro de Estudio</option>
+					<option>CU</option>
+					<option>VS</option>
+					<option>Curla</option>
+					<option>Curp</option>
+
+				</select>
+				<div id="resultado"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="reset" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-default" id="btn-registrarEstudiante" data-loading-text="Guardando..." >Registrarme</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal Estudiante-->
+
+<!-- Modal Docente -->
+<div class="modal fade" id="modal-registro-piloto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Registro de Docente</h4>
+			</div>
+			<div class="modal-body">
+				<input type="text" class="material-control" placeholder="Nombre del Docente" id="NombreDoc" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Apellido del Docente" id="ApellidoDoc" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="email" class="material-control" placeholder="Correo" id="CorreoDoc" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="tel" class="material-control" placeholder="Telefono" id="TelDoc" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="text" class="material-control" placeholder="Numero de Empleado" id="NumDoc" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<input type="date" class="material-control" placeholder="Fecha de Nacimiento" id="FechaNaDoc" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Fecha Nacimiento">
+				<select class="material-control" id="CarreraDoc">
+						<option>Selecciona la carrera</option>
+						<option>Ingenieria En Sistemas</option>
+						<option>Ingenieria Electrica</option>
+						<option>Matematicas</option>
+					</select>
+					<input type="password" class="material-control" placeholder="Contraseña" id="ContraDoc" required="required" maxlength="30" data-toggle="tooltip" data-placement="top" title="Id carrera">
+				<select class="material-control" id="CentroDoc">
+					<option>Selecciona el centro de Estudio</option>
+					<option>Ciudad Universitaria</option>
+					<option>Valle de Sula</option>
+					<option>Curla</option>
+					<option>Curp</option>
+
+				</select>
+				<div id="resultado"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="reset" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-default" id="btn-registrarDocente" data-loading-text="Guardando..." >Registrarme</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal Docente-->
+
+<!-- Modal Empleado -->
+
+<!-- Modal Empleado-->
