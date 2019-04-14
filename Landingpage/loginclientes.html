@@ -33,45 +33,40 @@
                        </div>
                    </div>
                    <div class="card-body">
-                       <form>
+                       <form id="form-login-pasajero">
                            <div class="input-group form-group">
                                <div class="input-group-prepend">
                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
                                </div>
-                               <input type="text" id="NumCta"  placeholder="Número de cuenta..."  required="required" maxlength="11" class="form-control">
+                               <input type="text" name="identidad" id="identidad"  placeholder="Número de identidad..."  required="required" maxlength="45" class="form-control">
                            </div>
                            <div class="input-group form-group">
                                <div class="input-group-prepend">
                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
                                </div>
-                               <input type="password" id="ContraAlumno"  placeholder="Contraseña..."  required="required" minlength="5" maxlength="20" class="form-control">
+                               <input type="password" name="contra-pasajero" id="contra-pasajero"  placeholder="Contraseña..."  required="required" minlength="3" maxlength="20" class="form-control">
                            </div>
                            <div class="row align-items-center remember">
                                <input type="checkbox">Recuerdeme
                            </div>
                            <div class="form-group">
-                                <input type="submit" id="btn-login-estudiante" value="Iniciar Sesión" class="btn float-right login_btn">
+                                <input type="button" id="btn-login-pasajero" value="Iniciar Sesión" class="btn float-right login_btn">
                             </div>
+                        </form>
                    </div>
 
                    <script>
-                        $("#btn-login-estudiante").click(function(){
-                             $.ajax({
-                                url:"ajax/login-estudiantes.php",
-                                data:"NumCta="+$("#NumCta").val() + "&ContraAlumno="+$("#ContraAlumno").val(),
+                        $("#btn-login-pasajero").click(function(){
+                            var parametros = $("#form-login-pasajero").serialize();
+                            console.log(parametros);
+                            $.ajax({
+                                url:"ajax/login-pasajero.php",
+                                data:parametros,
                                 dataType:"json",
                                 method:"POST",
                                 success:function(respuesta){
-                                     console.log(respuesta);
-                                     if (respuesta.estatus == 1){
-                                         
-                                         if (respuesta.Carrera=="Ingenieria En Sistemas")
-                                                  window.location.href = "../matri-estudiante/inicioEstudiante.php";//redireccionar
-                                             else if (respuesta.Carrera=="Matematicas")
-                                         window.location.href = "../matri-estudiante/inicioEstudiante.1.php";//redireccionar */
-                                         
-                                    }else 
-                                        alert("Credenciales invalidas"); 
+                                    alert(respuesta.Mensaje);
+                                    console.log(respuesta.Mensaje);
                                 },
                                 error:function(error){
                                     console.error(error);

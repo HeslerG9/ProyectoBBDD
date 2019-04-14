@@ -26,6 +26,19 @@ switch ($_GET["opcion"]) {
             'AGREGAR'
         )");
 
+        /*Insertar el telefono si se definió */
+        if($_POST['numero-telefono']!=null or $_POST['numero-telefono']!=''){
+            $conexion->ejecutarConsulta
+            (
+                'SELECT public.sp_registro_telefono(
+                    '."'".$_POST['numero-identidad']."'".', 
+                    '."'".$_POST['numero-telefono']."'".",
+                    'Activo', 
+                    'AGREGAR'
+                )"
+            );
+        }
+
         $mensaje='{"Mensaje1":'.'"'.(pg_fetch_row($resultado))[1].'",';
 
         /*Insertar el pasajero*/
