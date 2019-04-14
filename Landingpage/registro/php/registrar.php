@@ -11,13 +11,10 @@ switch ($_GET["opcion"]) {
             echo('{"error": "falló la conexión"}');
             return;
         };
-        //si se han enviado datos
-
-        /* $contraseña = password_hash($_POST["contraseña"], PASSWORD_DEFAULT); */
 
         /*Insertar la persona*/
-        $conexion->ejecutarConsulta(
-        'SELECT public.sp_registro_persona(
+        $resultado=$conexion->ejecutarConsulta(
+        'SELECT * from public.sp_registro_persona(
             '."'".$_POST['primer-nombre']."'".', 
             '."'".$_POST['segundo-nombre']."'".', 
             '."'".$_POST['primer-apellido']."'".', 
@@ -29,13 +26,23 @@ switch ($_GET["opcion"]) {
             'AGREGAR'
         )");
 
+        $mensaje='{"Mensaje1":'.'"'.(pg_fetch_row($resultado))[1].'",';
+
         /*Insertar el pasajero*/
+        $contraseña = password_hash($_POST["contraseña"], PASSWORD_DEFAULT);
+        $resultado=$conexion->ejecutarConsulta(
+            'SELECT * from public.sp_registro_pasajero(
+                '."'".$_POST['numero-identidad']."'".', 
+                '."'".$contraseña."'".', 
+                '."'".'AGREGAR'."'".'
+            )'
+        );
+        $mensaje.='"Mensaje2":'.'"'.(pg_fetch_row($resultado))[1].'"}';
 
+        //$registro = json_encode($_POST);
+        /* $registro='{"password":'.$contraseña.'}'; */
 
-
-        $registro = json_encode($_POST);
-
-        echo $registro;
+        echo $mensaje;
         break;
     
     case 2:

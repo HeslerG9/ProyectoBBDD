@@ -43,7 +43,8 @@ $.ajax({
                         dataType: "json",
                         data: parametros,
                         success: function (respuesta) {
-                            alert("se registró");
+                            /* alert("se registró"); */
+                            alert(respuesta.Mensaje1+', '+respuesta.Mensaje2);
                             limpiar();
                             console.log(respuesta);
                         },

@@ -41,6 +41,13 @@ BEGIN
     IF pvIdentidad='' or pvIdentidad is null THEN
         vcMensaje:=vcMensaje||'pvIdentidad, ';
     END IF;
+    /*Verifica que no haya otra persona con la misma identidad*/
+    IF EXISTS(
+        SELECT * FROM persona WHERE numeroidentidad=pvIdentidad
+    ) THEN
+        pvMensajeError:='Esta identidad ya existe';
+        RETURN;
+    END IF;
 
     IF pvAccion='' or pvAccion is null THEN
         vcMensaje:=vcMensaje||'pvAccion, ';
