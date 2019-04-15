@@ -1,6 +1,6 @@
 //llenar las opciones de las carreras con la base de datos
 $.ajax({
-    url: "php/pais.php",
+    url: "../landingpage/registro/php/pais.php",
     dataType: "json",
     success: function(respuesta) {
         console.log(respuesta);
@@ -34,11 +34,11 @@ $.ajax({
                     console.log("tamos mal :c");
                 } else {
                     /* console.log("tamos bien"); */
-                    var parametros = $("#formulario-pasajero").serialize();
+                    var parametros = $("#formulario-empleado").serialize();
                     console.log(parametros);
 
                     $.ajax({
-                        url: "php/registrar.php?opcion=1",
+                        url: "../landingpage/registro/php/registrarEmpleado.php?opcion=1",
                         method: "POST",
                         dataType: "json",
                         data: parametros,
@@ -61,7 +61,7 @@ $.ajax({
     }, false);
 })();
 
-$("#formulario-pasajero").submit(function () {
+$("#formulario-empleado").submit(function () {
     return false;
 });
 
@@ -73,7 +73,6 @@ function limpiar() {
     /* $("#fecha-nacimiento").val(""); */
     $("#direccion").val("");
     $("#numero-cuenta").val("");
-    $("#contraseña").val("");
     $("#pais").val("");
     $("#numero-identidad").val("");
     $("#email").val("");

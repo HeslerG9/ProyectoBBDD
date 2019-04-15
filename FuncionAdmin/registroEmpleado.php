@@ -46,15 +46,16 @@
        <div class="container">
         <div class="row my-1">
             <?php
-                include("formularios/formulario-empleado.html");
-            ?>
+                include("../landingpage/registro/formularios/formulario-empleado.html");
+			?>
+		
         </div>
 	
 	</section>
 
 	
     <!--====== Scripts -->
-    <script src="../landingpage/registro/js/pasajero.js"></script>
+	<script src="../landingpage/registro/js/empleado.js"></script>
 	<script src="../landingpage/js/jquery-3.1.1.min.js"></script>
 	<script src="../landingpage/js/sweetalert2.min.js"></script>
 	<script src="../landingpage/js/bootstrap.min.js"></script>
@@ -65,5 +66,10 @@
 	<!-- <script>
 		$.material.init();
 	</script> -->
+	<script>
+        $(document).ready(function() {
+            $("#op1").attr("class", "nav-link active");
+        });
+    </script>
 </body>
 </html>
