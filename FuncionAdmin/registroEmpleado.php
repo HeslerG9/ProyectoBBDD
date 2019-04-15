@@ -46,16 +46,16 @@
        <div class="container">
         <div class="row my-1">
             <?php
-                include("../landingpage/registro/formularios/formulario-empleado.html");
+                include("registro/formularios/formulario-empleado.html");
 			?>
-		
+	
         </div>
 	
 	</section>
 
 	
     <!--====== Scripts -->
-	<script src="../landingpage/registro/js/empleado.js"></script>
+	<script src="registro/js/empleado.js"></script>
 	<script src="../landingpage/js/jquery-3.1.1.min.js"></script>
 	<script src="../landingpage/js/sweetalert2.min.js"></script>
 	<script src="../landingpage/js/bootstrap.min.js"></script>

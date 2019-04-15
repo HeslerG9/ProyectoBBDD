@@ -45,13 +45,12 @@
           <li class="menu-active"><a href="#hero">Inicio</a></li>
           <li><a href="#bien">Vuelos</a></li>
           <li><a href="#about">Avisos</a></li>
-          <li><a href="#portfolio">Registro</a></li>
+          <li><a href="registro/index.php">Registro</a></li>
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
          
           <li class="menu-has-children"><a href="#">Iniciar Sesión</a>
             <ul>
-              <li><a href="loginclientes.html">Clientes</a></li>
-              <li><a href="loginempleados.html">Empleado</a></li>
+              <li><a href="loginpasajero.html">Pasajero</a></li>
               <li><a href="loginadmin.html">Administrador</a></li>
             </ul>
           </li>
