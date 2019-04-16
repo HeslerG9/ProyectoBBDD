@@ -1,0 +1,223 @@
+<div class="col-md-12 order-md-0">
+    <form class="needs-validation" id="formulario-vuelo" novalidate>
+        <div class="row">
+            <h4 class="col-md-6 mb-3">Datos Origen:</h4>
+            <h4 class="col-md-6 mb-3">Datos Destino:</h4>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Pais Origen:</label>
+                <select class="form-control" name="pais-origen" id="seleccion-pais-origen" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback">
+                    Se requiere un Pais Origen válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Pais Destino:</label>
+                <select class="form-control" name="pais-destino" id="seleccion-pais-destino" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback">
+                    Se requiere un Pais Destino válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Aeropuerto Origen:</label>
+                <select class="form-control" name="aeropuerto-origen" id="seleccion-aeropuerto-origen" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback">
+                    Se requiere un aeropuerto Origen válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Aeropuerto Destino:</label>
+                <select class="form-control" name="aeropuerto-destino" id="seleccion-aeropuerto-destino" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback">
+                    Se requiere un aeropuerto Destino válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Terminal Origen:</label>
+                <select class="form-control" name="terminal-origen" id="seleccion-terminal-origen" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback">
+                    Se requiere un terminal Origen válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Terminal Destino:</label>
+                <select class="form-control" name="terminal-destino" id="seleccion-terminal-destino" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback">
+                    Se requiere un terminal Destino válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Puerta Origen:</label>
+                <select class="form-control" name="puerta-origen" id="seleccion-puerta-origen" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback">
+                    Se requiere un puerta Origen válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Puerta Destino:</label>
+                <select class="form-control" name="puerta-destino" id="seleccion-puerta-destino" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback">
+                    Se requiere un puerta Destino válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Fecha y hora de salida:</label>
+                <input type="datetime" class="form-control" name="fecha-hora-salida" id="fecha-hora-salida" placeholder="1999-01-08 04:05:06" required>
+                <div class="invalid-feedback">
+                    Se requiere un fecha y hora salida válido.
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Fecha-hora llegada:</label>
+                <input type="datetime" class="form-control" name="fecha-hora-llegada" id="fecha-hora-llegada"
+                    placeholder="1999-01-08 04:05:06" required>
+                <div class="invalid-feedback">
+                    Se requiere un fecha y hora llegada válido.
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="mb-3">
+            <label for="pais">Avión:</label>
+            <div class="input-group">
+                <select class="form-control" name="avion" id="seleccion-avion" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere una avion válida.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="pais">Clase:</label>
+            <div class="input-group">
+                <select class="form-control" name="clase" id="seleccion-clase" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere una clase válida.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="pais">Piloto:</label>
+            <div class="input-group">
+                <select class="form-control" name="piloto" id="seleccion-piloto" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere una piloto válida.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="numero-escala">Número de Escalas:</label>
+            <div class="input-group">
+                <input type="number" class="form-control" name="numero-escala" id="numero-escala" placeholder="numero escala" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere un numero de escala válido.
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="escalas">
+            <h3 class="col-md-6 mb-3">Escalas:</h3>
+
+            <div class="col-md-12 mb-3 border">
+                <p>Escala 1:</p>
+                <div class="col-md-12 mb-3">
+                    <label for="primer-nombre">Pais Destino:</label>
+                    <select class="form-control" name="pais-destino" id="seleccion-pais-destino" required>
+                        <option value=""></option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Se requiere un Pais Destino válido.
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="primer-nombre">Aeropuerto Destino:</label>
+                    <select class="form-control" name="aeropuerto-destino" id="seleccion-aeropuerto-destino" required>
+                        <option value=""></option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Se requiere un aeropuerto Destino válido.
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="primer-nombre">Terminal Destino:</label>
+                    <select class="form-control" name="terminal-destino" id="seleccion-terminal-destino" required>
+                        <option value=""></option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Se requiere un terminal Destino válido.
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="primer-nombre">Puerta Destino:</label>
+                    <select class="form-control" name="puerta-destino" id="seleccion-puerta-destino" required>
+                        <option value=""></option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Se requiere un puerta Destino válido.
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="primer-nombre">Fecha-hora llegada:</label>
+                    <input type="datetime" class="form-control" name="fecha-hora-llegada" id="fecha-hora-llegada"
+                        placeholder="1999-01-08 04:05:06" required>
+                    <div class="invalid-feedback">
+                        Se requiere un fecha y hora llegada válido.
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                    <label for="primer-nombre">Fecha y hora de salida:</label>
+                    <input type="datetime" class="form-control" name="fecha-hora-salida" id="fecha-hora-salida"
+                        placeholder="1999-01-08 04:05:06" required>
+                    <div class="invalid-feedback">
+                        Se requiere un fecha y hora salida válido.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="registrar">Registrar</button>
+    </form>
+</div>
