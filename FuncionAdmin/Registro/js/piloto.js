@@ -1,23 +1,5 @@
 //llenar las opciones de las carreras con la base de datos
 $.ajax({
-    url: "registro/php/cargo.php",
-    dataType: "json",
-    success: function(respuesta) {
-        console.log(respuesta);
-        console.log(respuesta["total"]);
-        for (var i = 0; i < respuesta.total; i++) {
-            $("#seleccion-cargo").append(
-                `<option value="${respuesta[i].id}">${respuesta[i].descripcion}</option>`
-            );
-        }
-    },
-    error: function(error) {
-        console.log(error);
-    }
-});
-
-//llenar las opciones de las carreras con la base de datos
- $.ajax({
     url: "registro/php/pais.php",
     dataType: "json",
     success: function(respuesta) {
@@ -32,8 +14,7 @@ $.ajax({
     error: function(error) {
         console.log(error);
     }
-}); 
-
+});
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -53,11 +34,11 @@ $.ajax({
                     console.log("tamos mal :c");
                 } else {
                     /* console.log("tamos bien"); */
-                    var parametros = $("#formulario-empleado").serialize();
+                    var parametros = $("#formulario-piloto").serialize();
                     console.log(parametros);
 
                     $.ajax({
-                        url: "registro/php/registrarEmpleado.php?opcion=1",
+                        url: "registro/php/registrarPiloto.php?opcion=1",
                         method: "POST",
                         dataType: "json",
                         data: parametros,
@@ -80,7 +61,7 @@ $.ajax({
     }, false);
 })();
 
-$("#formulario-empleado").submit(function () {
+$("#formulario-piloto").submit(function () {
     return false;
 });
 
