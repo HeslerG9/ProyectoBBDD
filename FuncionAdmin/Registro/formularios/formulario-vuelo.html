@@ -141,6 +141,16 @@
         </div>
 
         <div class="mb-3">
+            <label for="precio-vuelo">Precio Vuelo:</label>
+            <div class="input-group">
+                <input type="number" class="form-control" name="precio-vuelo" id="precio-vuelo" placeholder="precio vuelo" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere un numero de escala válido.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
             <label for="numero-escala">Número de Escalas:</label>
             <div class="input-group">
                 <input type="number" class="form-control" name="numero-escala" id="numero-escala" placeholder="numero escala" required>
@@ -150,48 +160,47 @@
             </div>
         </div>
 
+        <h3 class="col-md-6 mb-3">Escalas:</h3>
         <div class="row" id="escalas">
-            <h3 class="col-md-6 mb-3">Escalas:</h3>
-
-            <div class="col-md-12 mb-3 border">
+            <div id="escala-1" class="col-md-12 mb-3 border">
                 <p>Escala 1:</p>
                 <div class="col-md-12 mb-3">
-                    <label for="primer-nombre">Pais Destino:</label>
-                    <select class="form-control" name="pais-destino" id="seleccion-pais-destino" required>
+                    <label for="pais-escala">Pais Escala:</label>
+                    <select class="form-control" name="pais-escala-1" id="seleccion-pais-escala-1" required>
                         <option value=""></option>
                     </select>
                     <div class="invalid-feedback">
-                        Se requiere un Pais Destino válido.
+                        Se requiere un Pais Escala válido.
                     </div>
                 </div>
 
                 <div class="col-md-12 mb-3">
-                    <label for="primer-nombre">Aeropuerto Destino:</label>
-                    <select class="form-control" name="aeropuerto-destino" id="seleccion-aeropuerto-destino" required>
+                    <label for="aeropuerto-escala">Aeropuerto escala:</label>
+                    <select class="form-control" name="aeropuerto-escala-1" id="seleccion-aeropuerto-escala-1" required>
                         <option value=""></option>
                     </select>
                     <div class="invalid-feedback">
-                        Se requiere un aeropuerto Destino válido.
+                        Se requiere un aeropuerto escala válido.
                     </div>
                 </div>
 
                 <div class="col-md-12 mb-3">
-                    <label for="primer-nombre">Terminal Destino:</label>
-                    <select class="form-control" name="terminal-destino" id="seleccion-terminal-destino" required>
+                    <label for="terminal-escala">Terminal escala:</label>
+                    <select class="form-control" name="terminal-escala-1" id="seleccion-terminal-escala-1" required>
                         <option value=""></option>
                     </select>
                     <div class="invalid-feedback">
-                        Se requiere un terminal Destino válido.
+                        Se requiere un terminal escala válido.
                     </div>
                 </div>
 
                 <div class="col-md-12 mb-3">
-                    <label for="primer-nombre">Puerta Destino:</label>
-                    <select class="form-control" name="puerta-destino" id="seleccion-puerta-destino" required>
+                    <label for="puerta-escala">Puerta escala:</label>
+                    <select class="form-control" name="puerta-escala-1" id="seleccion-puerta-escala-1" required>
                         <option value=""></option>
                     </select>
                     <div class="invalid-feedback">
-                        Se requiere un puerta Destino válido.
+                        Se requiere un puerta escala válido.
                     </div>
                 </div>
 

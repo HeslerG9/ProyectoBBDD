@@ -224,6 +224,19 @@ $.ajax({
     }
 });
 
+//ESCALAS
+$("#numero-escala").change(function(){
+    var num_escala=$("#numero-escala").val();
+    $("#escalas").html(
+        ``
+    );
+    for (var i = 0; i < num_escala; i++) {
+        $("#escalas").append(
+            `<p>Escala ${i+1}</p>`
+        );
+    }
+});
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
     'use strict';
