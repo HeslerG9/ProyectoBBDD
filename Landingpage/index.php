@@ -200,7 +200,7 @@ if (!isset($_SESSION['name'])) {
       <div class="row">
         <div class="section-header ">
          <h1> <b> Nuestra Flotilla de Aviones</b>  </h1>
-          <p class="lead" >   Abriendo nuevas caminos para la Educación.</p>
+          <p class="lead" >   Abriendo nuevas rutas para conectarse.</p>
         </div>
       </div>
       <!-- /row -->
@@ -215,12 +215,12 @@ if (!isset($_SESSION['name'])) {
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="course">
               <a href="#" class="course-img">
-                <img src="./img/cr/unahvs.jpg" alt="" >
+                <img style="height:140px;width: 250px;"  src="./img/Aviones/Boeing 777-3000.png" alt="" >
                 <i class="course-link-icon fa fa-link"></i>
               </a>
-              <a class="course-title" href="#">UNAH-VS</a>
+              <a class="course-title" href="#">Boeing 777-3000</a>
               <div class="course-details">
-                <span class="course-category">Valle de Sula</span>
+                <span class="course-category">BOEING</span>
                 
               </div>
             </div>
@@ -232,12 +232,12 @@ if (!isset($_SESSION['name'])) {
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="course">
               <a href="#" class="course-img">
-                <img src="./img/cr/curc.jpg" alt="">
+                <img src="./img/Aviones/Embraer 190.jpg" alt="">
                 <i class="course-link-icon fa fa-link"></i>
               </a>
-              <a class="course-title" href="#">UNAH-CURC </a>
+              <a class="course-title" href="#">Embraer 190 </a>
               <div class="course-details">
-                <span class="course-category">Centro Regional de </span>
+                <span class="course-category">Embraer  </span>
                 
               </div>
             </div>
@@ -248,12 +248,12 @@ if (!isset($_SESSION['name'])) {
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="course">
               <a href="#" class="course-img">
-                <img src="./img/cr/curla.jpg" alt="">
+                <img style="height:140px;width: 250px;" src="./img/Aviones/SuperJet 100.png" alt="">
                 <i class="course-link-icon fa fa-link"></i>
               </a>
-              <a class="course-title" href="#">UNAH-CURLA</a>
+              <a class="course-title" href="#">Super jet 100</a>
               <div class="course-details">
-                <span class="course-category">Centro Regional Litoral Atlantico</span>
+                <span class="course-category">Super jet</span>
               </div>
             </div>
           </div>
@@ -262,12 +262,12 @@ if (!isset($_SESSION['name'])) {
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="course">
               <a href="#" class="course-img">
-                <img src="./img/cr/curlp.jpg" alt="">
+                <img src="./img/Aviones/Airbus 319.jpg" alt="">
                 <i class="course-link-icon fa fa-link"></i>
               </a>
-              <a class="course-title" href="#">UNAH-CURLP</a>
+              <a class="course-title" href="#">Airbus 319</a>
               <div class="course-details">
-                <span class="course-category">Centro Regional de</span>
+                <span class="course-category">Airbus</span>
                 
               </div>
             </div>
@@ -284,12 +284,12 @@ if (!isset($_SESSION['name'])) {
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="course">
               <a href="#" class="course-img">
-                <img src="./img/cr/curno.jpg" alt="">
+                <img style="height:140px;"src="./img/Aviones/Airbus 320 neo.jpg" alt="">
                 <i class="course-link-icon fa fa-link"></i>
               </a>
-              <a class="course-title" href="#">UNAH-CURNO</a>
+              <a class="course-title" href="#">Airbus 320 neo</a>
               <div class="course-details">
-                <span class="course-category">Centro Regional de</span>
+                <span class="course-category">Airbus</span>
               
               </div>
             </div>
@@ -300,12 +300,12 @@ if (!isset($_SESSION['name'])) {
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="course">
               <a href="#" class="course-img">
-                <img src="./img/cr/curoc.jpg" alt="">
+                <img src="./img/Aviones/Airbus A321.jpg" alt="">
                 <i class="course-link-icon fa fa-link"></i>
               </a>
-              <a class="course-title" href="#">UNAH-CUROC</a>
+              <a class="course-title" href="#">Airbus A321</a>
               <div class="course-details">
-                <span class="course-category">Centro Regional de </span>
+                <span class="course-category">Airbus</span>
                 
               </div>
             </div>
@@ -316,12 +316,12 @@ if (!isset($_SESSION['name'])) {
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="course">
               <a href="#" class="course-img">
-                <img src="./img/cr/danli.jpg" alt="">
+                <img style="height:140px;width: 250px;" src="./img/Aviones/Airbus A330.png" alt="">
                 <i class="course-link-icon fa fa-link"></i>
               </a>
-              <a class="course-title" href="#">UNAH-TEC Danli</a>
+              <a class="course-title" href="#">Airbus A330</a>
               <div class="course-details">
-                <span class="course-category">Centro Tecnológico Danli</span>
+                <span class="course-category">Airbus</span>
                 
               </div>
             </div>
@@ -333,12 +333,12 @@ if (!isset($_SESSION['name'])) {
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="course">
               <a href="#" class="course-img">
-                <img src="./img/cr/aguan2.jpg" alt="">
+                <img src="./img/Aviones/Airbus A340-600.jpg" alt="">
                 <i class="course-link-icon fa fa-link"></i>
               </a>
-              <a class="course-title" href="#">UNAH-TEC AGUÁN</a>
+              <a class="course-title" href="#">Airbus A340-600</a>
               <div class="course-details">
-                <span class="course-category">Centro Tecnológico Aguan</span> 
+                <span class="course-category">Airbus</span> 
                 
               </div>
             </div>

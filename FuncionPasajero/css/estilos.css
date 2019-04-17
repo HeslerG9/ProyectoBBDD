@@ -1,0 +1,219 @@
+body{
+    background-image: url(../img/air/login.jpg);
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+#imagen-logo{
+    width: 200px;
+    position: relative;
+    top: 25px;
+    left: 25px;
+   
+    border-radius: 3%
+
+}
+
+#div-login{
+    background-color:rgba(21, 93, 226, 0.582);
+    width: 300px;
+    padding:40px;
+    margin-right: auto;
+    margin-left: auto;
+   
+}
+
+h1{
+    font-size: 2em;
+    font-weight: 100;
+}
+
+/*.caja-texto{
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 11px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b7b7b7;
+
+}*/
+
+
+
+/*
+input[type="email"], input[type="password"]{
+    width: 100%;
+    font-size: 1.2em;
+    padding: 10px 11px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b7b7b7;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+
+div-login{
+    
+}
+
+
+a {
+    text-decoration: none;
+    color: #0080ff;
+    font-size:0.9em;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #153e68;
+}
+
+button{
+    background-color:yellow;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    border: transparent;
+    padding: 10px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5%;
+    border: solid black 2px;
+}  */
+
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+background-image: url('../img/air/login.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(24, 36, 43, 0.877) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: rgb(18, 102, 228);
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color:#FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+#alv {
+    
+    position: relative;
+    left: auto;
+  top: 100px;
+}
+
+@media screen and (max-width: 992px) {
+  #alv {
+    position: relative;
+    
+margin-bottom: auto;
+margin-top: auto;      }
+}
+
+
+h2 {
+  display:inline-block;
+  position:relative;
+  left: 800px;
+  color: rgb(216, 84, 31);
+}
+
+body{
+ background-repeat: no-repeat;
+ background-size: cover;  
+}
+
+@media screen and (max-width: 992px) {
+body {
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+}
+
+.btn {
+width: 120px !important;
+
+}
+
