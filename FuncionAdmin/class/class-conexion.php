@@ -2,7 +2,7 @@
 	class Conexion{
 		private $host = "localhost";
 		private $usuario = "postgres";
-		private $password = "honduras100";
+		private $password = "123";
 		private $baseDatos = "aerolinea2";
 		private $puerto = 5432;
 		private $link;

@@ -1,5 +1,5 @@
 //llenar las opciones de las carreras con la base de datos
-//paisses
+//paises
 $.ajax({
     url: "registro/php/pais.php",
     dataType: "json",
@@ -171,6 +171,57 @@ $("#seleccion-terminal-destino").change(function(){
             console.log(error);
         }
     });
+});
+//aviones
+$.ajax({
+    url: "registro/php/aviones.php",
+    dataType: "json",
+    success: function(respuesta) {
+        console.log(respuesta);
+        console.log(respuesta["total"]);
+        for (var i = 0; i < respuesta.total; i++) {
+            $("#seleccion-avion").append(
+                `<option value="${respuesta[i].id}">${respuesta[i].nombre} capacidad:${respuesta[i].capacidad}</option>`
+            );
+        }
+    },
+    error: function(error) {
+        console.log(error);
+    }
+});
+//clase
+$.ajax({
+    url: "registro/php/clase.php",
+    dataType: "json",
+    success: function(respuesta) {
+        console.log(respuesta);
+        console.log(respuesta["total"]);
+        for (var i = 0; i < respuesta.total; i++) {
+            $("#seleccion-clase").append(
+                `<option value="${respuesta[i].id}">${respuesta[i].nombre} maletas:${respuesta[i].maleta}</option>`
+            );
+        }
+    },
+    error: function(error) {
+        console.log(error);
+    }
+});
+//pilotos
+$.ajax({
+    url: "registro/php/pilotos.php",
+    dataType: "json",
+    success: function(respuesta) {
+        console.log(respuesta);
+        console.log(respuesta["total"]);
+        for (var i = 0; i < respuesta.total; i++) {
+            $("#seleccion-piloto").append(
+                `<option value="${respuesta[i].id}">${respuesta[i].nombre}</option>`
+            );
+        }
+    },
+    error: function(error) {
+        console.log(error);
+    }
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
