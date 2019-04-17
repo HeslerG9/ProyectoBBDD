@@ -49,8 +49,17 @@ switch ($_GET["opcion"]) {
                 '."'".'AGREGAR'."'".'
             )'
         );
-        $mensaje.='"Mensaje2":'.'"'.(pg_fetch_row($resultado))[1].'"}';
+        $mensaje.='"Mensaje2":'.'"'.(pg_fetch_row($resultado))[1].'",';
 
+         /*Insertar el cargo has empleado*/
+         $resultado=$conexion->ejecutarConsulta(
+            'SELECT * from public.sp_cargo_empleado(
+                '."'".$_POST['numero-identidad']."'".', 
+                '.$_POST['sueldo'].', 
+                '.$_POST['cargo'].", 
+                 'AGREGAR'
+            )");
+            $mensaje.='"Mensaje3":'.'"'.(pg_fetch_row($resultado))[1].'"}';
         //$registro = json_encode($_POST);
         /* $registro='{"password":'.$contraseña.'}'; */
 

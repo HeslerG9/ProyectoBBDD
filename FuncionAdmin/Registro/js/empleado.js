@@ -63,7 +63,7 @@ $.ajax({
                         data: parametros,
                         success: function (respuesta) {
                             /* alert("se registró"); */
-                            alert(respuesta.Mensaje1+', '+respuesta.Mensaje2);
+                            alert(respuesta.Mensaje1+', '+respuesta.Mensaje2+', '+respuesta.Mensaje3);
                             limpiar();
                             console.log(respuesta);
                         },
@@ -89,12 +89,14 @@ function limpiar() {
     $("#segundo-nombre").val("");
     $("#primer-apellido").val("");
     $("#segundo-apellido").val("");
+    $("#cargo").val("");
     /* $("#fecha-nacimiento").val(""); */
     $("#direccion").val("");
     $("#numero-cuenta").val("");
     $("#pais").val("");
     $("#numero-identidad").val("");
     $("#email").val("");
+    $("#sueldo").val("");
 
     $("#formulario-estudiante").removeClass('was-validated');
 
