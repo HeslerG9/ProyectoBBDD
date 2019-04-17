@@ -1,5 +1,22 @@
 //llenar las opciones de las carreras con la base de datos
 $.ajax({
+    url: "registro/php/tipolicencia.php",
+    dataType: "json",
+    success: function(respuesta) {
+        console.log(respuesta);
+        console.log(respuesta["total"]);
+        for (var i = 0; i < respuesta.total; i++) {
+            $("#seleccion-tipolicencia").append(
+                `<option value="${respuesta[i].id}">${respuesta[i].descripcion}</option>`
+            );
+        }
+    },
+    error: function(error) {
+        console.log(error);
+    }
+});
+//llenar las opciones de las carreras con la base de datos
+$.ajax({
     url: "registro/php/pais.php",
     dataType: "json",
     success: function(respuesta) {
