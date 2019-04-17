@@ -1,0 +1,100 @@
+<div class="col-md-12 order-md-1">
+    <h4 class="mb-3">Datos</h4>
+    <form class="needs-validation" id="formulario-estudiante" novalidate>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="primer-nombre">Primer Nombre:</label>
+                <input type="text" class="form-control" name="primer-nombre" id="primer-nombre"  placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Se requiere un primer nombre válido.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="segundo-nombre">Segundo Nombre:</label>
+                <input type="text" class="form-control" name="segundo-nombre" id="segundo-nombre" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Se requiere un segundo nombre válido.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="primer-apellido">Primer Apellido:</label>
+                <input type="text" class="form-control" name="primer-apellido" id="primer-apellido" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Se requiere un primer apellido válido.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="segundo-apellido">Segundo Apellido:</label>
+                <input type="text" class="form-control" name="segundo-apellido" id="segundo-apellido"placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Se requiere un segundo apellido válido.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <div class="input-group">
+                <input type="date" class="form-control" name="fecha-nacimiento" id="fecha-nacimiento"  placeholder="numero de cuenta" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere una fecha de nacimiento válido.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="numero-cuenta">Numero de cuenta:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" name="numero-cuenta" id="numero-cuenta" placeholder="numero de cuenta" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere un numero de cuenta válido.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="contraseña">Contraseña:</label>
+            <div class="input-group">
+                <input type="password" class="form-control" name="contraseña" id="contraseña" placeholder="contraseña" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere una contraseña.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="carrera">Carrera:</label>
+            <div class="input-group">
+                <!-- <input type="text" class="form-control" name="numero-cuenta" placeholder="numero de cuenta"
+                            required> -->
+                <select class="form-control" name="carrera" id="seleccion-carrera" required>
+                    <option value=""></option>
+                </select>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere una carrera válida.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="numero-identidad">Numero de Identidad:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" name="numero-identidad"  id="numero-identidad"placeholder="numero Identidad" required>
+                <div class="invalid-feedback" style="width: 100%;">
+                    Se requiere un numero de identidad válido.
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Correo Electronico:</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com" required>
+            <div class="invalid-feedback">
+                Please enter a valid email address.
+            </div>
+        </div>
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="registrar">Registrar</button>
+    </form>
+</div>
