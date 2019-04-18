@@ -227,12 +227,80 @@ $.ajax({
 //ESCALAS
 $("#numero-escala").change(function(){
     var num_escala=$("#numero-escala").val();
-    $("#escalas").html(
-        ``
-    );
-    for (var i = 0; i < num_escala; i++) {
-        $("#escalas").append(
-            `<p>Escala ${i+1}</p>`
+    if(num_escala<=5 && num_escala>=0){
+        $("#escalas").html(
+            ``
+        );
+        for (var i = 0; i < num_escala; i++) {
+            $("#escalas").append(
+                `<div id="escala-${i+1}" class="col-md-12 mb-3 border">
+                    <p>Escala ${i+1}:</p>
+                    <div class="col-md-12 mb-3">
+                        <label for="pais-escala">Pais Escala:</label>
+                        <select onchange="llenaraeropuertoEscala(${i+1})" class="form-control" name="pais-escala-${i+1}" id="seleccion-pais-escala-${i+1}" required>
+                            <option value=""></option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Se requiere un Pais Escala válido.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <label for="aeropuerto-escala">Aeropuerto escala:</label>
+                        <select onchange="llenarterminalEscala(${i+1})" class="form-control" name="aeropuerto-escala-${i+1}" id="seleccion-aeropuerto-escala-${i+1}" required>
+                            <option value=""></option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Se requiere un aeropuerto escala válido.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <label for="terminal-escala">Terminal escala:</label>
+                        <select onchange="llenarpuertaEscala(${i+1})" class="form-control" name="terminal-escala-${i+1}" id="seleccion-terminal-escala-${i+1}" required>
+                            <option value=""></option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Se requiere un terminal escala válido.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <label for="puerta-escala">Puerta escala:</label>
+                        <select class="form-control" name="puerta-escala-${i+1}" id="seleccion-puerta-escala-${i+1}" required>
+                            <option value=""></option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Se requiere un puerta escala válido.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <label for="primer-nombre">Fecha-hora llegada:</label>
+                        <input type="datetime" class="form-control" name="fecha-hora-llegada-escala-${i+1}" id="fecha-hora-llegada-escala-${i+1}"
+                            placeholder="1999-01-08 04:05:06" required>
+                        <div class="invalid-feedback">
+                            Se requiere un fecha y hora llegada válido.
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <label for="primer-nombre">Fecha y hora de salida:</label>
+                        <input type="datetime" class="form-control" name="fecha-hora-salida-escala-${i+1}" id="fecha-hora-salida-escala-${i+1}"
+                            placeholder="1999-01-08 04:05:06" required>
+                        <div class="invalid-feedback">
+                            Se requiere un fecha y hora salida válido.
+                        </div>
+                    </div>
+
+                </div>`
+            );
+
+            llenarEscala(num_escala);
+        }
+    }else{
+        $("#escalas").html(
+            `<p class='text-danger'>Solo se permiten de 0 a 5 escalas.</p>`
         );
     }
 });
@@ -264,8 +332,7 @@ $("#numero-escala").change(function(){
                         dataType: "json",
                         data: parametros,
                         success: function (respuesta) {
-                            /* alert("se registró"); */
-                            alert(respuesta.Mensaje1+', '+respuesta.Mensaje2);
+                            alert(respuesta.Mensaje1+', '+respuesta.Mensaje2+', '+respuesta.Mensaje3);
                             limpiar();
                             console.log(respuesta);
                         },
@@ -300,4 +367,103 @@ function limpiar() {
 
     $("#formulario-vuelo").removeClass('was-validated');
 
+}
+
+function llenarEscala(cant_escala) {
+    $.ajax({
+        url: "registro/php/pais.php",
+        dataType: "json",
+        success: function(respuesta) {
+            console.log(respuesta);
+            console.log(respuesta["total"]);
+            for (var i = 0; i < respuesta.total; i++) {
+                for(var j=1;j<=cant_escala;j++){
+                    $("#seleccion-pais-escala-"+j).append(
+                        `<option value="${respuesta[i].id}">${respuesta[i].nombre}</option>`
+                    );
+                }
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+}
+
+function llenaraeropuertoEscala(escala){
+    var parametros="pais="+$("#seleccion-pais-escala-"+escala).val();
+    //alert(parametros);
+    $.ajax({
+        url: "registro/php/aeropuerto.php",
+        method: "POST",
+        data:parametros,
+        dataType: "json",
+        success: function(respuesta) {
+            console.log(respuesta);
+            console.log(respuesta["total"]);
+            $("#seleccion-aeropuerto-escala-"+escala).html(
+                `<option value=""></option>`
+            );
+            for (var i = 0; i < respuesta.total; i++) {
+                $("#seleccion-aeropuerto-escala-"+escala).append(
+                    `<option value="${respuesta[i].id}">${respuesta[i].nombre}</option>`
+                );
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+}
+
+function llenarterminalEscala(escala){
+    var parametros="aeropuerto="+$("#seleccion-aeropuerto-escala-"+escala).val();
+    //alert(parametros);
+    $.ajax({
+        url: "registro/php/terminal.php",
+        method: "POST",
+        data:parametros,
+        dataType: "json",
+        success: function(respuesta) {
+            console.log(respuesta);
+            console.log(respuesta["total"]);
+            $("#seleccion-terminal-escala-"+escala).html(
+                `<option value=""></option>`
+            );
+            for (var i = 0; i < respuesta.total; i++) {
+                $("#seleccion-terminal-escala-"+escala).append(
+                    `<option value="${respuesta[i].id}">${respuesta[i].nombre}</option>`
+                );
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+}
+
+function llenarpuertaEscala(escala){
+    var parametros="terminal="+$("#seleccion-terminal-escala-"+escala).val();
+    //alert(parametros);
+    $.ajax({
+        url: "registro/php/puerta.php",
+        method: "POST",
+        data:parametros,
+        dataType: "json",
+        success: function(respuesta) {
+            console.log(respuesta);
+            console.log(respuesta["total"]);
+            $("#seleccion-puerta-escala-"+escala).html(
+                `<option value=""></option>`
+            );
+            for (var i = 0; i < respuesta.total; i++) {
+                $("#seleccion-puerta-escala-"+escala).append(
+                    `<option value="${respuesta[i].id}">${respuesta[i].nombre}</option>`
+                );
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
 }
