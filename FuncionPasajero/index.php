@@ -50,7 +50,7 @@
           <li class="menu-active"><a href="#hero">Inicio</a></li>
           <li><a href="#bien">Vuelos</a></li>
           <li><a href="#about">Avisos</a></li>
-          <li><a href="#">Comprar Boletos</a></li>
+          <li><a href="CompraBoleto.php">Comprar Boletos</a></li>
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
          
           <li class="dropdown" style="margin-left:10; ">

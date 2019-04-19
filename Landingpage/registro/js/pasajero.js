@@ -1,6 +1,6 @@
 //llenar las opciones de las carreras con la base de datos
 $.ajax({
-    url: "php/pais.php",
+    url: "registro/php/pais.php",
     dataType: "json",
     success: function(respuesta) {
         console.log(respuesta);
@@ -38,7 +38,7 @@ $.ajax({
                     console.log(parametros);
 
                     $.ajax({
-                        url: "php/registrar.php?opcion=1",
+                        url: "registro/php/registrar.php?opcion=1",
                         method: "POST",
                         dataType: "json",
                         data: parametros,
