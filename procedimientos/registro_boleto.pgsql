@@ -114,7 +114,7 @@ BEGIN
         (SELECT * FROM preciovuelo WHERE vuelo_idvuelo=pnIdVuelo
         AND fechainicio<=CURRENT_DATE AND fechafin>CURRENT_DATE) THEN
             SELECT precio INTO vnPrecioCompra FROM preciovuelo WHERE vuelo_idvuelo=pnIdVuelo
-            AND fechainicio<=CURRENT_DATE AND fechafin>CURRENT_DATE
+            AND fechainicio<=CURRENT_DATE AND fechafin>CURRENT_DATE;
         ELSE
             pvMensajeError:='No hay un precio vigente para esete vuelo';
             RETURN;
