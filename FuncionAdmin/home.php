@@ -1,8 +1,8 @@
-<?php 
-    //session_start();  
-    //if (!isset($_SESSION["NumeroEmpleado"]))
-    //header("Location: no-autorizado.html");//Redireccion con PHP
-?>  
+<?php
+    session_start();
+    if ($_SESSION['lvl']==2){
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -121,8 +121,6 @@
 		</div>
 	</section>
 
-
-
 	<!--====== Scripts -->
 	<script src="js/registrosAdmin.js"></script>
 	<script src="../landingpage/js/jquery-3.1.1.min.js"></script>
@@ -139,3 +137,9 @@
 	</script>
 </body>
 </html>
+<?php
+}
+else{
+    header ('location: ../Landingpage');
+}
+?>

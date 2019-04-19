@@ -451,7 +451,7 @@ else {
         header('location: ../FuncionPasajero');
     } else {
         if ($_SESSION['lvl']==2) {
-            header('location: ../FuncionAdmin');
+            header('location: ../FuncionAdmin/home.php');
         }
     }
 }
