@@ -100,12 +100,14 @@ BEGIN
     END IF;
 
     IF pvAccion='AGREGAR' THEN
-        /*Insertando el boleto*/
+        
         IF EXISTS(SELECT * FROM boleto) THEN
             SELECT max(idboleto)+1 INTO vnIdBoleto FROM boleto;
         ELSE
             vnIdBoleto:=1;
         END IF;
+
+        pnIdBoleTo:=vnIdBoleto;
 
         SELECT CURRENT_DATE INTO vdFechaEmision;
 
@@ -126,19 +128,25 @@ BEGIN
         /*Total precio Boleto*/
         --contar las maletas
         SELECT numeromaletapermitida INTO vnEquipajePermitido from tipoclase where idtipoclase=vnTipoClase;
-
+        
         IF pnEquipaje>vnEquipajePermitido THEN
-            /*Insertar en boleto_has_cargoadicional*/
+            SELECT monto INTO vnCargoAdicional from cargoadicional where idcargoadicional=1;
+            vnTotalPrecioBoleto:=vnPrecioCompra+((pnEquipaje-vnEquipajePermitido)*vnCargoAdicional);
+        ELSE
+            vnTotalPrecioBoleto:=vnPrecioCompra;
+        END IF;
+
+        /*Insertando el boleto*/
+        INSERT INTO public.boleto(
+        idboleto, fechaemision, preciocompra, asiento_idasiento, vuelo_idvuelo, tipoclase_idtipoclase, pasajero_idpasajero, totalprecioboleto)
+        VALUES (vnIdBoleto, vdFechaEmision, vnPrecioCompra, pnIdAsiento, pnIdVuelo, vnTipoClase, pnIdPasajero, vnTotalPrecioBoleto);
+
+        /*Insertar en boleto_has_cargoadicional*/
+        IF pnEquipaje>vnEquipajePermitido THEN
             INSERT INTO public.boleto_has_cargoadicional(
             boleto_idboleto, cargoadicional_idcargoadicional)
             VALUES (vnIdBoleto, 1);
             --el cargoadicional 1 es el de equipaje adicional
-
-            SELECT monto INTO vnCargoAdicional from cargoadicional where idcargoadicional=1;
-
-            vnTotalPrecioBoleto:=vnPrecioCompra+((pnEquipaje-vnEquipajePermitido)*vnCargoAdicional);
-        ELSE
-            vnTotalPrecioBoleto:=vnPrecioCompra;
         END IF;
 
         /*Insertando en formapago_has_boleto*/
@@ -161,11 +169,6 @@ BEGIN
             pvMensajeError:='No hay un empleado que atienda la solicitud.';
             RETURN;
         END IF;
-
-
-        INSERT INTO public.boleto(
-        idboleto, fechaemision, preciocompra, asiento_idasiento, vuelo_idvuelo, tipoclase_idtipoclase, pasajero_idpasajero, totalprecioboleto)
-        VALUES (vnIdBoleto, vdFechaEmision, vnPrecioCompra, pnIdAsiento, pnIdVuelo, vnTipoClase, pnIdPasajero, vnTotalPrecioBoleto);
 
         pvMensajeError:='El boleto se agregó exitosamente';
         pbOcurreError:=FALSE;
