@@ -20,7 +20,7 @@
         
         //se hará la consulta a la base de datos
         $consulta="select pa.password, 
-        pe.pnombre ||' '|| pe.snombre ||' '||pe.papellido||' '||pe.sapellido nombre_completo ,pe.numeroidentidad from persona pe
+        pe.pnombre ||' '||pe.papellido nombre_completo ,pe.numeroidentidad from persona pe
         INNER JOIN pasajero pa on pa.persona_idpersona=pe.idpersona
         where pe.numeroidentidad="."'".$identidad_usuario."'";
         //si hubo un resultado
