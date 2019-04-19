@@ -73,7 +73,7 @@
   ============================-->
   <section id="hero">
     <div class="hero-container">
-      <h1>Bienvenidos <?php echo($_SESSION['name'])?></h1>
+      <h1>Bienvenido <?php echo($_SESSION['name'])?></h1>
       <h2>Siente el verdadero placer de volar     ! Viaja con nosotros ! </h2>
       <a href="#about" class="btn-get-started">Landing page</a>
     </div>

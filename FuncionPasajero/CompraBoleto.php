@@ -82,122 +82,97 @@
   <div class="container">
         <div class="row my-1">
  
-  <div class="col-md-12 order-md-1">
+  <div class="col-md-12 order-md-3">
     <h4 class="mb-3">Datos</h4>
     <form class="needs-validation" id="formulario-pasajero" novalidate>
         <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="primer-nombre">  El codigo de vuelo que quiere comprar:</label>
+            <div class="col-md-12 mb-3">
+                <label for="primer-nombre">  El codigo de vuelo que quiere comprar y su respectiva informacion alv:</label>
                 <input type="text" class="form-control" name="primer-nombre" id="primer-nombre"  placeholder="" value="" required>
                 <div class="invalid-feedback">
                     El codigo de vuelo que quiere comprar
                 </div>
             </div>
-            <div class="col-md-6 mb-3">
-                <label for="segundo-nombre">Segundo Nombre:</label>
-                <input type="text" class="form-control" name="segundo-nombre" id="segundo-nombre" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                    Se requiere un segundo nombre válido.
-                </div>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="primer-apellido">Primer Apellido:</label>
-                <input type="text" class="form-control" name="primer-apellido" id="primer-apellido" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                    Se requiere un primer apellido válido.
-                </div>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="segundo-apellido">Segundo Apellido:</label>
-                <input type="text" class="form-control" name="segundo-apellido" id="segundo-apellido"placeholder="" value="" required>
-                <div class="invalid-feedback">
-                    Se requiere un segundo apellido válido.
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="mb-3">
-            <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+            <div class="col-md-3 mb-3">
+        
+            <label for="Asiento">Asiento:</label>
             <div class="input-group">
-                <input type="date" class="form-control" name="fecha-nacimiento" id="fecha-nacimiento"  placeholder="numero de cuenta" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Se requiere una fecha de nacimiento válido.
-                </div>
-            </div>
-        </div> -->
-
-        <div class="mb-3">
-            <label for="direccion">Dirección:</label>
-            <div class="input-group">
-                <input type="text" class="form-control" name="direccion" id="direccion" placeholder="direccion" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Se requiere una dirección válida.
-                </div>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <label for="contraseña">Contraseña:</label>
-            <div class="input-group">
-                <input type="password" class="form-control" name="contraseña" id="contraseña" placeholder="contraseña" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Se requiere una contraseña.
-                </div>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <label for="pais">pais:</label>
-            <div class="input-group">
-                <select class="form-control" name="pais" id="seleccion-pais" required>
+                <select class="form-control" name="Asiento" id="seleccion-Asiento" required>
                     <option value=""></option>
                 </select>
                 <div class="invalid-feedback" style="width: 100%;">
-                    Se requiere una pais válida.
+                    Se requiere una Asiento válida.
                 </div>
             </div>
         </div>
 
-        <div class="mb-3">
-            <label for="numero-identidad">Numero de Identidad:</label>
-            <div class="input-group">
-                <input type="text" class="form-control" name="numero-identidad"  id="numero-identidad"placeholder="numero Identidad" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Se requiere un numero de identidad válido.
+        <div class="col-md-3 mb-3">
+        
+        <label for="Numero_maletas">Numero de maletas:</label>
+        <div class="input-group">
+            <select class="form-control" name="Numero_maletas" id="seleccion-Numero_maletas" required>
+                <option value=""></option>
+            </select>
+            <div class="invalid-feedback" style="width: 100%;">
+                Se requiere una Numero_maletas válida.
+            </div>
+        </div>
+    </div>
+            <div class="col-md-3 mb-3">
+            <div class="form-group">
+  <label for="sel1"> Forma de pago:</label>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Tarjeta de Credito
+</button>
+
+
+            </div>
+        </div>
+        <div class="col-md-12 mb-3">
+                    Su total a pagar sera .......
                 </div>
-            </div>
-        </div>
+  
 
-        <div class="mb-3">
-            <label for="numero-telefono">Numero de Teléfono:</label>
-            <div class="input-group">
-                <input type="text" class="form-control" name="numero-telefono"  id="numero-telefono"placeholder="numero telefono">
-                <div class="invalid-feedback" style="width: 100%;">
-                    Se requiere un numero de telefono válido.
-                </div>
-            </div>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ingrese el Numero de su tarjeta de credito o debito</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <input type="text" class="material-control" placeholder="Numero de la tarjeta" id="codigoCarrera" required="required" maxlength="8" data-toggle="tooltip" data-placement="top" title="Num_tarjeta">
+      <input type="text" class="material-control" placeholder="codigo de seguridad" id="codigoCarrera" required="required" maxlength="3" data-toggle="tooltip" data-placement="top" title="cod seguridad">
 
-        <div class="mb-3">
-            <label for="email">Correo Electronico:</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com" required>
-            <div class="invalid-feedback">
-                Please enter a valid email address.
-            </div>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit" id="registrar">Registrar</button>
+        <hr class="mb-8">
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="Comprar_Boleto">Comprar Boleto</button>
     </form>
 </div>
 </div>
 </div>
+</div> <br>
+
         <!-- /footer nav -->
         <footer id="footer" class="section">
             <?php 
             include ("footer.html")
             ?>
             </footer>
+
+            
  
   <!-- #footer -->
   <script src="js/jquery-3.3.1.js"></script> 

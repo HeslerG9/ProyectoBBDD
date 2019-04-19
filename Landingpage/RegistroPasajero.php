@@ -52,7 +52,7 @@ if (!isset($_SESSION['name'])) {
           <li class="menu-active"><a href="index.php">Inicio</a></li>
           <li><a href="#bien">Vuelos</a></li>
           <li><a href="#about">Avisos</a></li>
-          <li><a href="registro/index.php">Registro</a></li>
+          <li><a href="RegistroPasajero.php">Registro</a></li>
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
          
           <li class="menu-has-children"><a href="#">Iniciar Sesión</a>
