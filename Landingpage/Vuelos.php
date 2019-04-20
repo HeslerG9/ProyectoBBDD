@@ -50,9 +50,9 @@ if (!isset($_SESSION['name'])) {
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="index.php">Inicio</a></li>
-          <li><a href="vuelos.php">Vuelos</a></li>
+          <li class="menu-active"><a href="vuelos.php">Vuelos</a></li>
           <li><a href="#about">Avisos</a></li>
-          <li class="menu-active"><a href="RegistroPasajero.php">Registro</a></li>
+          <li><a href="RegistroPasajero.php">Registro</a></li>
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
          
           <li class="menu-has-children"><a href="#">Iniciar Sesión</a>
@@ -73,7 +73,7 @@ if (!isset($_SESSION['name'])) {
     <div class="hero-container">
       <h1>Bienvenidos Pasajero</h1>
       <h2>Siente el verdadero placer de volar     ! Viaja con nosotros ! </h2>
-      <a href="#about" class="btn-get-started">Registrese aqui!!</a>
+      <a href="#about" class="btn-get-started">Ver todos los vuelos aqui</a>
     </div>
   </section><!-- #hero -->
  
@@ -83,17 +83,79 @@ if (!isset($_SESSION['name'])) {
     ============================-->
     
     <section id="about">  
-  
-    <div class="container">
-        <div class="row my-1">
-            <?php
-                include("registro/formularios/formulario-pasajero.html");
-            ?>
-        </div>
- 
+
+    <div class="container" id="contenido-pagina">
+        <!-- Matrícula/////////////////// -->
+        <!-- adicionar////// -->
+        <div class="container-fluid border my-5" style="padding: 5px;">
+            <h3 style="color: rgb(131, 2, 2);">Vuelos</h3>
+            <div class="row">
+                <div class="col-12">
+                    <p>Encuentra tu vuelo</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="form-group">
+                        <label for="sel1" class="encabezado-tabla my-2">Pais Origen:</label>
+                        <select class="form-control" name="pais-origen" id="seleccion-pais-origen" required>
+                        <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-group">
+                        <label for="sel2" class="encabezado-tabla my-2">Pais Destino:</label>
+                        <select class="form-control" name="pais-destino" id="seleccion-pais-destino" required>
+                        <option value=""></option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" id="boton-matricular" class="btn btn-danger" style="margin-bottom: 1em;">Buscar vuelo</button>
+                </div>
+            </div>
         </div>
 
-      </div>
+
+        <!-- Asignaturas añadidas -->
+        <div class="container-fluid forma03-tabla">
+            <div class="text-center">
+                <div class=" encabezado">
+                    Listado de vuelos
+                </div>
+            </div>
+
+            <div>
+                <table class="table table-striped table-responsive-lg">
+                    <thead>
+                        <tr>
+                            <th>Id vuelo</th>
+                            <th>Cantidad Escalas</th>
+                            <th>Fecha y hora de salida</th>
+                            <th>Fecha y hora de llegada</th>
+                            <th>Piloto</th>
+                            <th>Avion</th>
+                            <th>Tipo de clase</th>
+                            
+                            <!-- <th>Semana</th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="tabla_vuelo">
+                                          
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+            
+
+      
     </section><!-- #contact -->
 
   </main>
@@ -112,8 +174,12 @@ if (!isset($_SESSION['name'])) {
             </footer>
  
   <!-- #footer -->
+  
    <script src="js/jquery-3.3.1.js"></script>
+   
     <script src="registro/js/pasajero.js"></script>
+    <script src="registro/js/vuelo.js"></script>
+    <script src="registro/js/Administrar.js"></script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>

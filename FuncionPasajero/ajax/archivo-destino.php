@@ -45,6 +45,7 @@
 
                 $_SESSION['name']=$contraseña_guardada['nombre_completo'];
                 $_SESSION['identidad']=$contraseña_guardada['numeroidentidad'];
+                $_SESSION['avion']=7;
                 $_SESSION['lvl']=1;
                
                 
