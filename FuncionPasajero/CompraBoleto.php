@@ -12,7 +12,7 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <span class="d-none" id="alv"><?php echo $_GET['contenido'] ?></span>
+  <span class="d-none" id="idvuelo"><?php echo $_GET['idvuelo'] ?></span>
 
   <!-- Favicons -->
   <link href="img/unah10.png" rel="icon">
@@ -90,7 +90,8 @@
     ?>
     
   <br>
-
+  </div>
+    </section>
         <!-- /footer nav -->
         <footer id="footer" class="section">
             <?php 

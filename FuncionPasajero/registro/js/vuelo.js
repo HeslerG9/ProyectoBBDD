@@ -56,5 +56,5 @@ $.ajax({
 });
 
 function comprar_boleto(idvuelo){
-    window.location.href = "CompraBoleto.php?contenido="+idvuelo;
+    window.location.href = "CompraBoleto.php?idvuelo="+idvuelo;
 }

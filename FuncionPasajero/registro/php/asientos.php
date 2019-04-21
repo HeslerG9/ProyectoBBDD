@@ -3,7 +3,7 @@
     $conexion=new Conexion();
 
     $resultado=$conexion->ejecutarConsulta('SELECT * FROM vw_asientos_disponible
-                                           where idvuelo=1 ');
+                                           where idvuelo='.$_POST['idvuelo']);
 
     //$registro=array();
 

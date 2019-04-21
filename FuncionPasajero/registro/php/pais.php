@@ -2,7 +2,7 @@
     include '../../class/class-conexion.php';
     $conexion=new Conexion();
 
-    $resultado=$conexion->ejecutarConsulta('SELECT * FROM p');
+    $resultado=$conexion->ejecutarConsulta('SELECT * FROM pais');
 
     //$registro=array();
 
