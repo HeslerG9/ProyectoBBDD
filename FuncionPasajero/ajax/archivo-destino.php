@@ -19,8 +19,8 @@
         $contraseña_introducida=$_POST['contra-pasajero'];
         
         //se hará la consulta a la base de datos
-        $consulta="select pa.password, 
-        pe.pnombre ||' '||pe.papellido||' nombre_completo ,pe.numeroidentidad from persona pe
+        $consulta="select pa.password, pa.idpasajero,
+        pe.pnombre ||' '||pe.papellido nombre_completo ,pe.numeroidentidad from persona pe
         INNER JOIN pasajero pa on pa.persona_idpersona=pe.idpersona
         where pe.numeroidentidad="."'".$identidad_usuario."'";
         //si hubo un resultado
@@ -47,6 +47,7 @@
                 $_SESSION['identidad']=$contraseña_guardada['numeroidentidad'];
                 $_SESSION['avion']=7;
                 $_SESSION['lvl']=1;
+                $_SESSION['idpasajero']=$contraseña_guardada['idpasajero'];
                
                 
             }//si la contraseña es incorrecta

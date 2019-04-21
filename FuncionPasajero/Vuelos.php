@@ -47,18 +47,22 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="index.php">Inicio</a></li>
-          <li class="menu-active"><a href="vuelos.php">Vuelos</a></li>
+          <li class="menu-active"><a href="#hero">Inicio</a></li>
+          <li><a href="vuelos.php">Vuelos</a></li>
           <li><a href="#about">Avisos</a></li>
-          <li><a href="RegistroPasajero.php">Registro</a></li>
+          <li><a href="CompraBoleto.php">Comprar Boletos</a></li>
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
          
-          <li class="menu-has-children"><a href="#">Iniciar Sesión</a>
-            <ul>
-              <li><a href="loginpasajero.html">Pasajero</a></li>
-              <li><a href="loginadmin.html">Administrador</a></li>
-            </ul>
-          </li>
+          <li class="dropdown" style="margin-left:10; ">
+                            <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;"
+                                    width="50px">
+                                <span style="color: white;background: #6c6666; class="usu"><?php echo($_SESSION['name'])?><!-- Aqui va con php el nombre obtenido de la session --></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-divider"></div>
+                                <input id="cerrar_sesion" type="button" value="Cerrar-Sesion">
+                            </div>
+                        </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -167,7 +171,7 @@
   <!-- #footer -->
   
    <script src="js/jquery-3.3.1.js"></script>
-   
+   <script src="js/pasajero_login.js"></script>
     <script src="registro/js/pasajero.js"></script>
     <script src="registro/js/vuelo.js"></script>
     <!-- <script src="registro/js/Administrar.js"></script> -->
