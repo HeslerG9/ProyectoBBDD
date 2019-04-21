@@ -95,18 +95,19 @@ if (!isset($_SESSION['name'])) {
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6">
                     <div class="form-group">
-                        <label for="sel1" class="encabezado-tabla my-2">Pais Origen:</label>
-                        <select class="form-control" name="pais-origen" id="seleccion-pais-origen" required>
+                        <label for="sel2" class="encabezado-tabla my-2">Pais Destino:</label>
+                        <select class="form-control" name="pais-destino" id="seleccion-pais-destino" required>
                         <option value=""></option>
                         </select>
                     </div>
                 </div>
+                
                 <div class="col-12 col-md-6">
                     <div class="form-group">
-                        <label for="sel2" class="encabezado-tabla my-2">Pais Destino:</label>
-                        <select class="form-control" name="pais-destino" id="seleccion-pais-destino" required>
+                        <label for="sel1" class="encabezado-tabla my-2">Pais Origen:</label>
+                        <select class="form-control" name="pais-origen" id="seleccion-pais-origen" required>
                         <option value=""></option>
                         </select>
                     </div>
@@ -137,7 +138,7 @@ if (!isset($_SESSION['name'])) {
                             <th>Cantidad Escalas</th>
                             <th>Fecha y hora de salida</th>
                             <th>Fecha y hora de llegada</th>
-                            <th>Piloto</th>
+                            <th>Pais de salida</th>
                             <th>Avion</th>
                             <th>Tipo de clase</th>
                             
@@ -179,7 +180,7 @@ if (!isset($_SESSION['name'])) {
    
     <script src="registro/js/pasajero.js"></script>
     <script src="registro/js/vuelo.js"></script>
-    <script src="registro/js/Administrar.js"></script>
+    <!-- <script src="registro/js/Administrar.js"></script> -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>

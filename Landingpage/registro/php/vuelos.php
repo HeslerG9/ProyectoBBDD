@@ -2,7 +2,7 @@
     include '../../class/class-conexion.php';
     $conexion=new Conexion();
 
-    $resultado=$conexion->ejecutarConsulta('SELECT * FROM vuelo');
+    $resultado=$conexion->ejecutarConsulta('SELECT * FROM vw_vuelo_paises where idpais='.$_POST['pais']);
 
     //$registro=array();
 
@@ -13,7 +13,7 @@
 
     while($fila=pg_fetch_row($resultado)){
 
-        $formato.='"'.$i.'":{"id":"'.$fila[0].'","cantidadescala":"'.$fila[1].'","horafechasalida":"'.$fila[2].'","horafechallegada":"'.$fila[3].'","piloto_idpiloto":"'.$fila[4].'","avion_idavion":"'.$fila[5].'","tipoclase_idtipoclase":"'.$fila[6].'","idpuertadestino":"'.$fila[7].'","idpuertaorigen":"'.$fila[8].'"},';  
+        $formato.='"'.$i.'":{"id":"'.$fila[0].'","cantidadescala":"'.$fila[1].'","horafechasalida":"'.$fila[2].'","horafechallegada":"'.$fila[3].'","avion_idavion":"'.$fila[4].'","tipoclase_idtipoclase":"'.$fila[5].'","nombre":"'.$fila[6].'","idpais":"'.$fila[7].'","idpuertaorigen":"'.$fila[8].'","idpuertadestino":"'.$fila[9].'"},';  
         $i++;
     }
 

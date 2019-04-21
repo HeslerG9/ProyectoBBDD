@@ -9,12 +9,12 @@ $.ajax({
             $("#tabla_vuelo").append(
                  ` <tr>
                  <th>${respuesta[i].id}</th>
-                 <th>${respuesta[i].cantidadescalas}</th>
-                 <th>${respuesta[i].fechahorasalida}</th>
-                 <th>${respuesta[i].fechahorallegada}</th>
+                 <th>${respuesta[i].cantidadescala}</th>
+                 <th>${respuesta[i].horafechasalida}</th>
+                 <th>${respuesta[i].horafechallegada}</th>
                  <th>${respuesta[i].piloto_idpiloto}</th>
                  <th>${respuesta[i].avion_idavion}</th>
-                 <th>${respuesta[i].TipoClase_idTipoClase}</th>         
+                 <th>${respuesta[i].tipoclase_idtipoclase}</th>         
              </tr>`
             );
         }

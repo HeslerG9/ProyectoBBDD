@@ -19,3 +19,38 @@ $.ajax({
         console.log(error);
     }
 });
+
+$("#seleccion-pais-origen").change(function(){
+    var parametros="pais="+$("#seleccion-pais-origen").val();
+    //alert(parametros);
+/* Lista de vuelos */
+$.ajax({
+    url:"registro/php/vuelos.php",
+    method: "POST",
+    data:parametros,
+    dataType:"json",
+    success:function(respuesta){
+        console.log(respuesta);
+        console.log(respuesta["total"]);
+        for (var i=0;i<respuesta.total;i++){
+            $("#tabla_vuelo").append(
+                 ` <tr>
+                 <th>${respuesta[i].id}</th>
+                 <th>${respuesta[i].cantidadescala}</th>
+                 <th>${respuesta[i].horafechasalida}</th>
+                 <th>${respuesta[i].horafechallegada}</th>
+                 <th>${respuesta[i].nombre}</th>
+                 <th>${respuesta[i].avion_idavion}</th>
+                 <th>${respuesta[i].tipoclase_idtipoclase}</th>
+                 <th><button type="button" id="btn-presione">Comprar boleto</button></th>            
+             </tr>`
+            );
+        }
+
+    },
+    error:function(error){
+        console.error(error);
+    }
+});
+
+});
