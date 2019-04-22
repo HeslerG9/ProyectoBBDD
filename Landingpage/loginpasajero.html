@@ -71,10 +71,11 @@
                             dataType: "text",
                             method: "POST",
                             success: function (respuesta) {
-                                /* alert(respuesta); */
                                 console.log(respuesta);
                                 if (respuesta == "1") {
                                     window.location.href = "../FuncionPasajero/index.php";
+                                }else{
+                                    alert(respuesta);
                                 }
                             },
                             error: function (error) {
