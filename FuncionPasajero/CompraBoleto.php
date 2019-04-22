@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Página Aerolinea</title>
@@ -12,7 +13,8 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <span class="d-none" id="idvuelo"><?php echo $_GET['idvuelo'] ?></span>
+  <span class="d-none" id="idvuelo">
+    <?php echo $_GET['idvuelo'] ?></span>
 
   <!-- Favicons -->
   <link href="img/unah10.png" rel="icon">
@@ -42,29 +44,32 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#hero"><img src="img/air/logoarolinea.jpg" width="15" height="25" alt="" title="" /></img>  Copán Airlines</a></h1>
+        <h1><a href="#hero"><img src="img/air/logoarolinea.jpg" width="15" height="25" alt="" title="" /></img> Copán
+            Airlines</a></h1>
         <!-- Uncomment below if you prefer to use a text logo -->
         <!--<h1><a href="#hero">Regna</a></h1>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li ><a href="index.php">Inicio</a></li>
+          <li><a href="index.php">Inicio</a></li>
           <li><a href="vuelos.php">Vuelos</a></li>
           <li><a href="#about">Avisos</a></li>
           <li class="menu-active"><a href="compraboleto.php">Comprar Boletos</a></li>
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
-         
+
           <li class="dropdown" style="margin-left:10; ">
-                            <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;"
-                                    width="50px">
-                                <span style="color: white;background: #6c6666; class="usu"><?php echo($_SESSION['name'])?><!-- Aqui va con php el nombre obtenido de la session --></span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <div class="dropdown-divider"></div>
-                                <input id="cerrar_sesion" type="button" value="Cerrar-Sesion">
-                            </div>
-                        </li>
+            <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;"
+              width="50px">
+              <span style="color: white;background: #6c6666; class=" usu">
+                <?php echo($_SESSION['name'])?>
+                <!-- Aqui va con php el nombre obtenido de la session --></span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-divider"></div>
+              <input id="cerrar_sesion" type="button" value="Cerrar-Sesion">
+            </div>
+          </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -75,34 +80,36 @@
   ============================-->
   <section id="hero">
     <div class="hero-container">
-      <h1>Bienvenidos <?php echo($_SESSION['name'])?></h1>
-      <h2>Siente el verdadero placer de volar     ! Viaja con nosotros ! </h2>
+      <h1>Bienvenidos
+        <?php echo($_SESSION['name'])?>
+      </h1>
+      <h2>Siente el verdadero placer de volar ! Viaja con nosotros ! </h2>
       <a href="#about" class="btn-get-started">Comprar boletos</a>
     </div>
   </section><!-- #hero -->
   <section id="about">
-  <div class="container">
-        <div class="row my-1">
- 
-  <div class="col-md-12 order-md-3">
-  <?php
+    <div class="container">
+      <div class="row my-1">
+
+        <div class="col-md-12 order-md-3">
+          <?php
         include("registro/formularios/formulario-compraboleto.html");
     ?>
-    
-  <br>
-  </div>
-    </section>
-        <!-- /footer nav -->
-        <footer id="footer" class="section">
-            <?php 
+
+          <br>
+        </div>
+  </section>
+  <!-- /footer nav -->
+  <footer id="footer" class="section">
+    <?php 
             include ("footer.html")
             ?>
-            </footer>
+  </footer>
 
-            
- 
+
+
   <!-- #footer -->
-  <script src="js/jquery-3.3.1.js"></script> 
+  <script src="js/jquery-3.3.1.js"></script>
   <script src="registro/js/compraboleto.js"></script>
   <script src="js/pasajero_login.js"></script>
   <script src="lib/jquery/jquery.min.js"></script>
@@ -124,6 +131,7 @@
   <script src="js/main.js"></script>
 
 </body>
+
 </html>
 <?php
 }

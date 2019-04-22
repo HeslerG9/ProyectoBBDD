@@ -60,7 +60,7 @@ BEGIN
         END IF;
         --Verificando que no haya otro boleto con el mismo asiento en el mismo vuelo
         IF EXISTS(
-            SELECT * from boleto WHERE idboleto=pnIdBoleto and asiento_idasiento=pnIdAsiento) THEN
+            SELECT * from boleto WHERE vuelo_idvuelo=pnIdVuelo and asiento_idasiento=pnIdAsiento) THEN
             pvMensajeError:='ya existe un boleto para este asiento en este vuelo';
             RETURN;
         END IF;

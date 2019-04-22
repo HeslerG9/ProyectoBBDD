@@ -27,7 +27,7 @@ switch ($_GET["opcion"]) {
         $resultado_procedimiento=pg_fetch_row($resultado);
         $mensaje='{"Mensaje1":'.'"'.$resultado_procedimiento[1].'"}';
         
-        if ($resultado_procedimiento[0]=='t') {
+        if ($resultado_procedimiento[0]=='t' && $resultado_procedimiento[2]>0) {
             //Eliminando lo que se pudo haber insertado
             $conexion->ejecutarConsulta(
                 'SELECT * from public.sp_registro_boleto(
@@ -45,8 +45,6 @@ switch ($_GET["opcion"]) {
         }
 
         //$mensaje='{"Mensaje1":'.'"'.(pg_fetch_row($resultado))[1].'",';
-
-      
 
         echo $mensaje;
         break;

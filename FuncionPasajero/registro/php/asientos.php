@@ -3,7 +3,8 @@
     $conexion=new Conexion();
 
     $resultado=$conexion->ejecutarConsulta('SELECT * FROM vw_asientos_disponible
-                                           where idvuelo='.$_POST['idvuelo']);
+                                           where idvuelo='.$_POST['idvuelo'].' and idasiento not in 
+                                           (select asiento_idasiento from boleto where vuelo_idvuelo='.$_POST['idvuelo'].')');
 
     //$registro=array();
 
