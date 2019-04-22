@@ -80,7 +80,7 @@
         <div class="hero-container">
             <h1>Bienvenidos Pasajero</h1>
             <h2>Siente el verdadero placer de volar ! Viaja con nosotros ! </h2>
-            <a href="#about" class="btn-get-started">Ver todos los vuelos aqui</a>
+            <a href="#about" class="btn-get-started">Ver el Listado de todos los boletos comprados</a>
         </div>
     </section><!-- #hero -->
 

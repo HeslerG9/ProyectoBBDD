@@ -49,8 +49,8 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Inicio</a></li>
           <li><a href="vuelos.php">Vuelos</a></li>
-          <li><a href="#about">Avisos</a></li>
-          <li><a href="CompraBoleto.php">Comprar Boletos</a></li>
+          <li><a href="boletos_pasajero.php">Boletos comprados</a></li>
+         <!--  <li><a href="CompraBoleto.php">Comprar Boletos</a></li> -->
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
          
           <li class="dropdown" style="margin-left:10; ">
