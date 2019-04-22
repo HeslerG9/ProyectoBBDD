@@ -49,7 +49,7 @@ $.ajax({
                         data: parametros,
                         success: function (respuesta) {
                             /* alert("se registró"); */
-                            alert(respuesta.Mensaje1);
+                            alert(respuesta.Mensaje1+'. Total pagado: '+respuesta.Mensaje2);
                             limpiar();
                             console.log(respuesta);
                         },
