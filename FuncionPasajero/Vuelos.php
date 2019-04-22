@@ -133,8 +133,8 @@
                             <th>Fecha y hora de salida</th>
                             <th>Fecha y hora de llegada</th>
                             <th>Pais de salida</th>
-                            <th>Avion</th>
                             <th>Tipo de clase</th>
+                            <th>Precio del vuelo</th>
                             
                             <!-- <th>Semana</th> -->
                         </tr>

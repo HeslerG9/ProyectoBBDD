@@ -51,7 +51,6 @@ if (!isset($_SESSION['name'])) {
         <ul class="nav-menu">
           <li><a href="index.php">Inicio</a></li>
           <li class="menu-active"><a href="vuelos.php">Vuelos</a></li>
-          <li><a href="#about">Avisos</a></li>
           <li><a href="RegistroPasajero.php">Registro</a></li>
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
          
@@ -134,13 +133,13 @@ if (!isset($_SESSION['name'])) {
                 <table class="table table-striped table-responsive-lg">
                     <thead>
                         <tr>
-                            <th>Id vuelo</th>
+                        <th>Id vuelo</th>
                             <th>Cantidad Escalas</th>
                             <th>Fecha y hora de salida</th>
                             <th>Fecha y hora de llegada</th>
                             <th>Pais de salida</th>
-                            <th>Avion</th>
                             <th>Tipo de clase</th>
+                            <th>Precio del vuelo</th>
                             
                             <!-- <th>Semana</th> -->
                         </tr>
