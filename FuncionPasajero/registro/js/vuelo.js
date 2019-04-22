@@ -40,8 +40,8 @@ $.ajax({
                  <th>${respuesta[i].horafechasalida}</th>
                  <th>${respuesta[i].horafechallegada}</th>
                  <th>${respuesta[i].nombre}</th>
-                 <th>${respuesta[i].avion_idavion}</th>
-                 <th>${respuesta[i].tipoclase_idtipoclase}</th>
+                 <th>${respuesta[i].descripcion}</th>
+                 <th>${respuesta[i].precio}</th>
                  <th><button type="button" onclick="comprar_boleto(${respuesta[i].id})">Comprar boleto</button></th>            
              </tr>`
             );

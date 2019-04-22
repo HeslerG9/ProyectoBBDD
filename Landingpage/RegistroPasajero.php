@@ -51,7 +51,6 @@ if (!isset($_SESSION['name'])) {
         <ul class="nav-menu">
           <li><a href="index.php">Inicio</a></li>
           <li><a href="vuelos.php">Vuelos</a></li>
-          <li><a href="#about">Avisos</a></li>
           <li class="menu-active"><a href="RegistroPasajero.php">Registro</a></li>
           <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
          

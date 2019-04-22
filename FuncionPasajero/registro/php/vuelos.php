@@ -13,7 +13,7 @@
 
     while($fila=pg_fetch_row($resultado)){
 
-        $formato.='"'.$i.'":{"id":"'.$fila[0].'","cantidadescala":"'.$fila[1].'","horafechasalida":"'.$fila[2].'","horafechallegada":"'.$fila[3].'","avion_idavion":"'.$fila[4].'","tipoclase_idtipoclase":"'.$fila[5].'","nombre":"'.$fila[6].'","idpais":"'.$fila[7].'","idpuertaorigen":"'.$fila[8].'","idpuertadestino":"'.$fila[9].'"},';  
+        $formato.='"'.$i.'":{"id":"'.$fila[0].'","cantidadescala":"'.$fila[1].'","horafechasalida":"'.$fila[2].'","horafechallegada":"'.$fila[3].'","descripcion":"'.$fila[4].'","nombre":"'.$fila[5].'","idpais":"'.$fila[6].'","idpuertaorigen":"'.$fila[7].'","idpuertadestino":"'.$fila[8].'","precio":"'.$fila[9].'"},';  
         $i++;
     }
 
