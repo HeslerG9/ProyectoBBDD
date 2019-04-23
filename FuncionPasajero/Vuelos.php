@@ -49,28 +49,26 @@
             </div>
 
             <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="#hero">Inicio</a></li>
-                    <li><a href="vuelos.php">Vuelos</a></li>
-                    <li><a href="#about">Avisos</a></li>
-                    <li><a href="CompraBoleto.php">Comprar Boletos</a></li>
-                    <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
-
-                    <li class="dropdown" style="margin-left:10; ">
-                        <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;"
-                            width="50px">
-                            <span style="color: white;background: #6c6666; class=" usu">
-                                <?php echo($_SESSION['name'])?>
-                                <!-- Aqui va con php el nombre obtenido de la session --></span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <div class="dropdown-divider"></div>
-                            <input id="cerrar_sesion" type="button" value="Cerrar-Sesion">
-                        </div>
-                    </li>
-                </ul>
-            </nav><!-- #nav-menu-container -->
-        </div>
+        <ul class="nav-menu">
+          <li><a href="index.php">Inicio</a></li>
+          <li class="menu-active"><a href="vuelos.php">Vuelos</a></li>
+          <li><a href="boletos_pasajero.php">Boletos comprados</a></li>
+        <!--   <li><a href="CompraBoleto.php">Comprar Boletos</a></li> -->
+          <!--<li><a data-toggle="modal" data-target="#exampleModal">Registrate</a></li>-->
+         
+          <li class="dropdown" style="margin-left:10; ">
+                            <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;"
+                                    width="50px">
+                                <span style="color: white;background: #6c6666; class="usu"><?php echo($_SESSION['name'])?><!-- Aqui va con php el nombre obtenido de la session --></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-divider"></div>
+                                <input id="cerrar_sesion" type="button" value="Cerrar-Sesion">
+                            </div>
+                        </li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
     </header><!-- #header -->
 
     <!--==========================
@@ -78,7 +76,7 @@
   ============================-->
     <section id="hero">
         <div class="hero-container">
-            <h1>Bienvenidos Pasajero</h1>
+            <h1>Bienvenido <?php echo($_SESSION['name'])?></h1>
             <h2>Siente el verdadero placer de volar ! Viaja con nosotros ! </h2>
             <a href="#about" class="btn-get-started">Ver todos los vuelos aqui</a>
         </div>
