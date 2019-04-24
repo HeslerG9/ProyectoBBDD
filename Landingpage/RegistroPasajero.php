@@ -70,7 +70,7 @@ if (!isset($_SESSION['name'])) {
   ============================-->
   <section id="hero">
     <div class="hero-container">
-      <h1>Bienvenidos Pasajero</h1>
+      <h1>Registrate Pasajero</h1>
       <h2>Siente el verdadero placer de volar     ! Viaja con nosotros ! </h2>
       <a href="#about" class="btn-get-started">Registrese aqui!!</a>
     </div>

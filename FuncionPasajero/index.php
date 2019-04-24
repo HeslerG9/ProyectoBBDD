@@ -93,7 +93,7 @@
           <div class="col-lg-6 content order-lg-1 order-2">
             <h2 class="title">Bienvenidos viajeros</h2>
             <p>
-              LUCEM ASPICIO
+              A BORDO
             </p>
 
              <div class="icon-box wow fadeInUp">
@@ -112,7 +112,7 @@
             </div>
 
              <div class="icon-box wow fadeInUp">
-              <div class="icon"><i class="fa fa-mortar-board"></i></div>
+              <div class="icon"><i class="fa fa-plane"></i></div>
               <h4 class="title"><a href="">CHARTERS</a></h4>
               <p class="description">Si lo que quieres es comodidad contamos <br>
                 con vuelos charters a tu disponibilidad </p>
@@ -143,29 +143,28 @@
     <section id="about">
       <div class="container">
         <div class="row about-container">
-
-          <div class="col-lg-6 content order-lg-1 order-2">
+        <div class="col-lg-6 content order-lg-1 order-2">
             <h2 class="title">Ciudades importantes</h2>
             <p>
               En esta sección se muestran una serie de ciudades a donde viajamos
             </p>
 
             <div class="icon-box wow fadeInUp">
-              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <div class="icon"><i class="fa fa-star-o"></i></div>
               <h4 class="title"><a href="">Rio de Janeiro</a></h4>
-              <p class="description">30 DE NOVIEMBRE AL 19 DE FEBRERO PAGO EN BANCOS DE MATRICULA I PAC 2019</p>
+              <p class="description">Es uno de los principales centros económicos, de recursos culturales y financieros del Brasil. Es conocida internacionalmente por sus iconos culturales y paisajes, como el Pan de Azúcar, la estatua del Cristo Redentor (una de las siete maravillas del mundo moderno)</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-photo"></i></div>
+              <div class="icon"><i class="fa fa-telegram"></i></div>
               <h4 class="title"><a href="">Hong kong</a></h4>
-              <p class="description">DEL 7 al 10 DE DICIEMBRE CENSO DE MATRICULA CORRESPONDIENTE AL I PAC 2019</p>
+              <p class="description"> Su vibrante centro urbano densamente poblado es un importante puerto y centro financiero global con un horizonte lleno de rascacielos</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <div class="icon"><i class="fa fa-plane"></i></div>
               <h4 class="title"><a href="">Milan</a></h4>
-              <p class="description">PAGO DE LABORATORIO CORRESPONDIENTE AL III PAC 2018 HABILITADO DESDE EL 20 HASTA 26 DE SEPTIEMBRE. Banco LAFISE, DAVIVIENDA, BANPAIS, FICOHSA Y ATLANTIDA a nivel nacional. Las agencias de Banco LAFISE en CIUDAD UNIVERSITARIA y BOULEVARD SUYAPA, NO estan habilitados para realizar pago de laboratorio </p>
+              <p class="description">Milán, una metrópolis en la región norte de Lombardía de Italia, es una capital mundial de la moda y el diseño. Hogar de la bolsa de valores nacional, es un centro financiero también conocido por sus restaurantes y tiendas de alto nivel.</p>
             </div>
 
           </div>

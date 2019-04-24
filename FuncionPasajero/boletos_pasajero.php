@@ -143,9 +143,9 @@
     <!-- #footer -->
 
     <script src="js/jquery-3.3.1.js"></script>
-    <!-- <script src="js/pasajero_login.js"></script>
-    <script src="registro/js/pasajero.js"></script>
-    <script src="registro/js/vuelo.js"></script> -->
+    <script src="js/pasajero_login.js"></script>
+    <!-- <script src="registro/js/pasajero.js"></script>
+    <script src="registro/js/vuelo.js"></script> --> -->
     <!-- <script src="registro/js/Administrar.js"></script> -->
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
