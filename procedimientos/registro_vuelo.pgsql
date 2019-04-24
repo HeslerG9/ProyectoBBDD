@@ -29,7 +29,7 @@ BEGIN
     END IF;
 
     IF pvAccion='AGREGAR' THEN
-        IF pnCantidadEscala=0 or pnCantidadEscala is null THEN
+        IF pnCantidadEscala is null THEN
             vcMensaje:=vcMensaje||'pnCantidadEscala, ';
         END IF;
         IF ptHoraFechaSalida is null THEN
